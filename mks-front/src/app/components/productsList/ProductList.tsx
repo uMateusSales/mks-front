@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from "react";
-import { ProductGrid } from "./styles";
+import { ProductCard, ProductGrid } from "./styles";
 import { Produto } from "@/types";
 import { TransactionContext } from "@/app/GlobalContext";
 
@@ -13,12 +13,12 @@ const ProductList = () => {
     <>
       {produtos.map((produto) => (
         <ProductGrid>
-          <div id={produto.id}>
+          <ProductCard>
             <h1>{produto.name}</h1>
             <p>{produto.description}</p>
             <p>{produto.brand}</p>
             <p>{produto.price}</p>
-          </div>
+          </ProductCard>
         </ProductGrid>
       ))}
     </>
