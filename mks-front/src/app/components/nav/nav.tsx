@@ -7,7 +7,7 @@ import {
   TituloContainer,
   NavbarContainer,
   CartNumber,
-} from "../styles";
+} from "./styles";
 import Image from "next/image";
 
 const NavBar = () => {
