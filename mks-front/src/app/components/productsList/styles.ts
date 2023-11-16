@@ -66,7 +66,19 @@ export const ProdutoDesc = styled.p`
   line-height: 12px;
 `;
 
-export const ComprarContainer = styled.div`
+export const ComprarContainer = styled.button`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 0px 0px 8px 8px;
+
   background: #0f52ba;
+`;
+export const ComprarTexto = styled.p`
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
 `;

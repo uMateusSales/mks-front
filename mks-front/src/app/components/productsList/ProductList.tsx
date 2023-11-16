@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext } from "react";
 import {
+  ComprarTexto,
   ComprarContainer,
   ImgBox,
   NameAndPrice,
@@ -40,6 +41,7 @@ const ProductList = () => {
             <ProdutoDesc>{produto.description}</ProdutoDesc>
             <ComprarContainer>
               <ShoppingBagIcon />
+              <ComprarTexto>Comprar</ComprarTexto>
             </ComprarContainer>
           </ProductCard>
         ))}
