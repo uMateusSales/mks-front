@@ -29,7 +29,7 @@ export const GlobalProvider = ({ children }: TransactionsProviderProps) => {
   }
   useEffect(() => {
     getProducts();
-    console.log(produtos);
+    setTimeout(() => console.log(produtos), 2000);
   }, []);
   return (
     <TransactionContext.Provider value={{ getProducts, produtos }}>
