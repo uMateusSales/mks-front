@@ -24,7 +24,7 @@ const ProductList = () => {
     <>
       <ProductGrid>
         {produtos.map((produto) => (
-          <ProductCard>
+          <ProductCard key={produto.id}>
             <ImgBox>
               <Image
                 width={127}
@@ -35,7 +35,7 @@ const ProductList = () => {
             </ImgBox>
             <NameAndPrice>
               <TituloProduto>{produto.name}</TituloProduto>
-              <PrecoBox>{produto.price}</PrecoBox>
+              <PrecoBox>R${produto.price}</PrecoBox>
             </NameAndPrice>
 
             <ProdutoDesc>{produto.description}</ProdutoDesc>

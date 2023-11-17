@@ -2,21 +2,23 @@
 import styled from "styled-components";
 
 export const ProductGrid = styled.div`
+background-color: #F9F9F9;
   display: grid;
   grid-template-columns: 1fr;
-  border: 1px;
-  border-color: black;
-  background-color: beige;
+ 
+
   gap: 20px;
   @media (min-width: 768px) {
-    background-color: burlywood;
+    background-color: #F9F9F9;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 220px 250px;
   }
 `;
 export const ProductCard = styled.div`
-  display: flex;
-  flex-direction: column;
+min-width: 218px;
+min-height: 285px;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   border-radius: 8px;
   background: #fff;
@@ -32,9 +34,12 @@ export const NameAndPrice = styled.div`
 export const ImgBox = styled.div`
   display: flex;
   align-self: center;
+  justify-self: center;
 `;
 
 export const TituloProduto = styled.p`
+width: 124px;
+height: 38px;
   color: #2c2c2c;
   font-family: Montserrat;
   font-size: 16px;
@@ -67,12 +72,15 @@ export const ProdutoDesc = styled.p`
 `;
 
 export const ComprarContainer = styled.button`
+max-width: 218px;
+max-height: 31.907px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  cursor: pointer;
   align-items: center;
   border-radius: 0px 0px 8px 8px;
-
-  background: #0f52ba;
+border-color: #0f52ba;
+  background-color: #0f52ba;
 `;
 export const ComprarTexto = styled.p`
   color: #fff;
