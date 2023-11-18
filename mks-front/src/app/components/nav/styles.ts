@@ -6,7 +6,7 @@ export const NavbarContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background: #0f52ba;
-  max-width: 100%;
+  width: 100%;
 `;
 
 export const TituloContainer = styled.div`

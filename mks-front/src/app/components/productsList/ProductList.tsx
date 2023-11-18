@@ -12,19 +12,20 @@ import {
   TituloProduto,
   PrecoText,
 } from "./styles";
-import { TransactionContext } from "@/app/GlobalContext";
+import { GlobalContext } from "@/app/GlobalContext";
 import Image from "next/image";
 import ShoppingBagIcon from "../../../../public/ShoppingBagIcon";
+import { IProduto } from "@/types";
 
 const ProductList = () => {
-  const { produtos } = useContext(TransactionContext);
+  const { produtos } = useContext(GlobalContext);
   console.log(produtos);
   setTimeout(() => console.log(produtos), 2000);
 
   return (
     <>
       <ProductGrid>
-        {produtos.map((produto) => (
+        {produtos.map((produto: IProduto) => (
           <ProductCard key={produto.id}>
             <ImgBox>
               <Image

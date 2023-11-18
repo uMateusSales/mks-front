@@ -132,6 +132,11 @@ export const ComprarContainer = styled.button`
   border-radius: 0px 0px 8px 8px;
   border-color: #0f52ba;
   background-color: #0f52ba;
+
+  @media (max-width: 600px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 `;
 export const ComprarTexto = styled.p`
   color: #fff;

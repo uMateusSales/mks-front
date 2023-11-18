@@ -1,22 +1,22 @@
 "use client";
 
-import { Produto } from "@/types";
+import { IProduto } from "@/types";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
-interface TransactionContextType {
-  produtos: Produto[];
-  getProducts: (data: Produto) => Promise<void>;
+interface GlobalContextType {
+  produtos: IProduto[];
+  getProducts: (data: IProduto) => Promise<void>;
 }
 
-export const TransactionContext = createContext<TransactionContextType>(
-  {} as TransactionContextType
+export const GlobalContext = createContext<GlobalContextType>(
+  {} as GlobalContextType
 );
 
-interface TransactionsProviderProps {
+interface GlobalProviderProps {
   children: ReactNode;
 }
-export const GlobalProvider = ({ children }: TransactionsProviderProps) => {
-  const [produtos, setProdutos] = useState<Produto[]>([]);
+export const GlobalProvider = ({ children }: GlobalProviderProps) => {
+  const [produtos, setProdutos] = useState<IProduto[]>([]);
   async function getProducts() {
     const res = await fetch(
       "https://mks-frontend-challenge-04811e8151e6.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC"
@@ -32,8 +32,8 @@ export const GlobalProvider = ({ children }: TransactionsProviderProps) => {
     setTimeout(() => console.log(produtos), 2000);
   }, []);
   return (
-    <TransactionContext.Provider value={{ getProducts, produtos }}>
+    <GlobalContext.Provider value={{ getProducts, produtos }}>
       {children}
-    </TransactionContext.Provider>
+    </GlobalContext.Provider>
   );
 };

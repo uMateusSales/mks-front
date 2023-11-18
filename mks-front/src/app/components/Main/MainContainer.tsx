@@ -1,6 +1,7 @@
 "use client";
 import React, { ReactNode } from "react";
 import { MainSection } from "./styles";
+import NavBar from "../nav/nav";
 
 interface IMainContainer {
   children: ReactNode;

@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "@/lib/registry";
 import NavBar from "./components/nav/nav";
-import { GlobalProvider, TransactionContext } from "./GlobalContext";
+import { GlobalProvider } from "./GlobalContext";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -21,11 +21,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <GlobalProvider>
-            <NavBar />
-
-            {children}
-          </GlobalProvider>
+          <GlobalProvider>{children}</GlobalProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
