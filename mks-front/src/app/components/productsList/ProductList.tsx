@@ -10,6 +10,7 @@ import {
   ProductGrid,
   ProdutoDesc,
   TituloProduto,
+  PrecoText,
 } from "./styles";
 import { TransactionContext } from "@/app/GlobalContext";
 import Image from "next/image";
@@ -35,7 +36,9 @@ const ProductList = () => {
             </ImgBox>
             <NameAndPrice>
               <TituloProduto>{produto.name}</TituloProduto>
-              <PrecoBox>R${produto.price}</PrecoBox>
+              <PrecoBox>
+                <PrecoText>R${produto.price}</PrecoText>
+              </PrecoBox>
             </NameAndPrice>
 
             <ProdutoDesc>{produto.description}</ProdutoDesc>
